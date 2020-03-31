@@ -6,6 +6,9 @@ import 'package:bezier/bezier.dart';
 import 'package:vector_math/vector_math.dart';
 
 class Smoothie {
+  ///Creates a sampled curve going through the [originalDataPoints].
+  ///
+  ///Returns a list of [sectionPointsCount] * [originalDataPoints] points that lay on a curve going through the [originalDataPoints].
   List<Point> getSampledCurve(
       num sectionPointsCount, List<Point> originalDataPoints) {
     var sampledCurve = List<Point>();
