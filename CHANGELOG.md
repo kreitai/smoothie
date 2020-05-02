@@ -1,3 +1,7 @@
+## [0.0.4] - 2020-05-02
+
+### Improved naming and documentation
+
 ## [0.0.3] - 2020-04-23
 
 ### Improved Readme example
