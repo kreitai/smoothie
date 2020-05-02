@@ -12,7 +12,8 @@ class Smoothie {
   ///[originalDataPoints] is a list of the original points
   ///
   ///Returns a list of [oversamplingFactor] * [originalDataPoints.length] points that lay on a curve going through the [originalDataPoints].
-  List<Point> getSampledCurve(num oversamplingFactor, List<Point> originalDataPoints) {
+  List<Point> getSampledCurve(num oversamplingFactor,
+      List<Point> originalDataPoints,) {
     var sampledCurve = List<Point>();
     for (int sc = 0; sc < originalDataPoints.length - 1; sc++) {
       var curve = new CubicBezier(
