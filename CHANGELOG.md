@@ -1,3 +1,7 @@
+## [0.1.1] - 2020-05-04
+
+### Separate extension for list of custom data points
+
 ## [0.1.0] - 2020-05-04
 
 ### Breaking change - using extension methods
