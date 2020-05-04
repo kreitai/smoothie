@@ -1,3 +1,7 @@
+## [0.1.0] - 2020-05-04
+
+### Breaking change - using extension methods
+
 ## [0.0.4] - 2020-05-02
 
 ### Improved naming and documentation
