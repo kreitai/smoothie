@@ -1,3 +1,7 @@
+## [0.1.2] - 2020-05-04
+
+### Updated the example
+
 ## [0.1.1] - 2020-05-04
 
 ### Separate extension for list of custom data points
