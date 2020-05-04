@@ -65,7 +65,9 @@ class _SmoothieHomePageState extends State<SmoothieHomePage> {
         measureFn: (Point chartData, _) => chartData.y,
         colorFn: (Point point, _) => charts.MaterialPalette.teal.shadeDefault,
         id: 'Example Series',
-        data: Smoothie().getSampledCurve(_samplesPerPoint, originalDataSeries),
+        data: originalDataSeries.getSampledCurveFromPoints(
+          _samplesPerPoint,
+        ),
       ),
     ];
 

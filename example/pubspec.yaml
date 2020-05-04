@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   charts_flutter: ^0.8.1
-  smoothie: ^0.0.1
+  smoothie: ^0.1.1
   cupertino_icons: ^0.1.3
 
 dev_dependencies:
