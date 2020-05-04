@@ -1,10 +1,10 @@
 name: smoothie
 description: Create and sample a cmooth bezier curve going through a given set of points
-version: 0.0.4
+version: 0.1.0
 homepage: https://github.com/alekskuzmin/smoothie
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
