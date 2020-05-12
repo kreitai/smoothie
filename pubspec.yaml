@@ -1,6 +1,6 @@
 name: smoothie
 description: Create and sample a smooth bezier curve going through a given set of points
-version: 0.1.2
+version: 0.1.3
 homepage: https://github.com/alekskuzmin/smoothie
 
 environment:

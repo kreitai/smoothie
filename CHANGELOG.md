@@ -1,3 +1,7 @@
+## [0.1.3] - 2020-05-12
+
+### Improve documentation
+
 ## [0.1.2] - 2020-05-04
 
 ### Updated the example
