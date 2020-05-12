@@ -32,4 +32,4 @@ var _sampledCurve = Smoothie().getSampledCurve(_samplesPerPoint, _originalDataSe
 
 See oversampling in action:
 
-![vertical](https://raw.githubusercontent.com/alekskuzmin/smoothie/master/example/example.gif)
+<img src="https://raw.githubusercontent.com/alekskuzmin/smoothie/master/example/example.gif" width="270" height="480">
