@@ -1,6 +1,10 @@
+## [0.1.4] - 2020-05-12
+
+### Updated example
+
 ## [0.1.3] - 2020-05-12
 
-### Improve documentation
+### Improved documentation
 
 ## [0.1.2] - 2020-05-04
 

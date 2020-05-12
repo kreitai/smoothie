@@ -29,3 +29,7 @@ Create a smooth curve:
 ```dart
 var _sampledCurve = Smoothie().getSampledCurve(_samplesPerPoint, _originalDataSeries);
 ```
+
+See oversampling in action:
+
+![vertical](https://raw.githubusercontent.com/alekskuzmin/smoothie/master/example/example.gif)
