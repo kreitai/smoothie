@@ -23,11 +23,16 @@ Define a number of sampling points per original point:
 ```dart
 int _samplesPerPoint = 10;
 ```
+Import `smoothie`:
 
-Create a smooth curve:
+```
+import 'package:smoothie/smoothie.dart';
+```
+
+Create a smooth curve using the `getSampledCurveFromPoints` extension function on your original data:
 
 ```dart
-var _sampledCurve = Smoothie().getSampledCurve(_samplesPerPoint, _originalDataSeries);
+List<Point<num>> _sampledCurve = _originalDataSeries.getSampledCurveFromPoints(_samplesPerPoint);
 ```
 
 See oversampling in action:
