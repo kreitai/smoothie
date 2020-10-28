@@ -29,31 +29,31 @@ class SmoothieHomePage extends StatefulWidget {
 }
 
 class _SmoothieHomePageState extends State<SmoothieHomePage> {
-  int _samplesPerPoint = 0;
+  int _samplingPointCount = 0;
 
   var originalDataSeries = <Point>[
     Point(0, 5),
-    Point(3, 15),
-    Point(5, 10),
-    Point(6, 6),
+    Point(2, 15),
+    Point(3, 10),
+    Point(8, 6),
     Point(9, 13),
   ];
 
   @override
   void initState() {
     super.initState();
-    _samplesPerPoint = 10;
+    _samplingPointCount = originalDataSeries.length;
   }
 
   void _incrementCounter() {
     setState(() {
-      _samplesPerPoint++;
+      _samplingPointCount++;
     });
   }
 
   void _decrementCounter() {
     setState(() {
-      if (_samplesPerPoint > 1) _samplesPerPoint--;
+      if (_samplingPointCount > originalDataSeries.length) _samplingPointCount--;
     });
   }
 
@@ -61,12 +61,12 @@ class _SmoothieHomePageState extends State<SmoothieHomePage> {
   Widget build(BuildContext context) {
     var series = [
       new charts.Series(
-        domainFn: (Point chartData, _) => chartData.x / _samplesPerPoint,
+        domainFn: (Point chartData, _) => chartData.x,
         measureFn: (Point chartData, _) => chartData.y,
         colorFn: (Point point, _) => charts.MaterialPalette.teal.shadeDefault,
         id: 'Example Series',
-        data: originalDataSeries.getSampledCurveFromPoints(
-          _samplesPerPoint,
+        data: originalDataSeries.smooth(
+          _samplingPointCount,
         ),
       ),
     ];
@@ -88,7 +88,7 @@ class _SmoothieHomePageState extends State<SmoothieHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'The curve now has $_samplesPerPoint sampling points per original point.',
+                'The smooth curve now has $_samplingPointCount points.',
               ),
               Container(
                 height: 200,
