@@ -49,9 +49,12 @@ extension Smooth<POINT> on List<POINT> {
       var curve = new CubicBezier(
         [
           Vector2(0, mappedDataPoints[sc].y.toDouble()),
-          Vector2(oversamplingFactor.toDouble() / 2, mappedDataPoints[sc].y.toDouble()),
-          Vector2(oversamplingFactor.toDouble() / 2, mappedDataPoints[sc + 1].y.toDouble()),
-          Vector2(oversamplingFactor.toDouble(), mappedDataPoints[sc + 1].y.toDouble()),
+          Vector2(oversamplingFactor.toDouble() / 2,
+              mappedDataPoints[sc].y.toDouble()),
+          Vector2(oversamplingFactor.toDouble() / 2,
+              mappedDataPoints[sc + 1].y.toDouble()),
+          Vector2(oversamplingFactor.toDouble(),
+              mappedDataPoints[sc + 1].y.toDouble()),
         ],
       );
       for (int j = 0; j < oversamplingFactor; j++) {
