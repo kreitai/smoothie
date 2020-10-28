@@ -53,7 +53,8 @@ class _SmoothieHomePageState extends State<SmoothieHomePage> {
 
   void _decrementCounter() {
     setState(() {
-      if (_samplingPointCount > originalDataSeries.length) _samplingPointCount--;
+      if (_samplingPointCount > originalDataSeries.length)
+        _samplingPointCount--;
     });
   }
 
