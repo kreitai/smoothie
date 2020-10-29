@@ -1,3 +1,8 @@
+## [0.2.0+1] - 2020-05-12
+
+### Breaking changes
+Re-worked the API for smoothing function. The new function is designed to handle input data with points arbitrarily (not evenly) spread across X axis.
+
 ## [0.1.4] - 2020-05-12
 
 ### Updated example
