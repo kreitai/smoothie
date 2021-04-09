@@ -14,15 +14,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: SmoothieHomePage(title: 'Smoothie Demo'),
+      home: SmoothieHomePage(),
     );
   }
 }
 
 class SmoothieHomePage extends StatefulWidget {
-  SmoothieHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
+  SmoothieHomePage({Key? key}) : super(key: key);
 
   @override
   _SmoothieHomePageState createState() => _SmoothieHomePageState();
@@ -31,7 +29,7 @@ class SmoothieHomePage extends StatefulWidget {
 class _SmoothieHomePageState extends State<SmoothieHomePage> {
   int _samplingPointCount = 0;
 
-  var originalDataSeries = <Point>[
+  var _originalDataSeries = <Point>[
     Point(0, 5),
     Point(2, 15),
     Point(3, 10),
@@ -42,7 +40,7 @@ class _SmoothieHomePageState extends State<SmoothieHomePage> {
   @override
   void initState() {
     super.initState();
-    _samplingPointCount = originalDataSeries.length;
+    _samplingPointCount = _originalDataSeries.length;
   }
 
   void _incrementCounter() {
@@ -53,7 +51,7 @@ class _SmoothieHomePageState extends State<SmoothieHomePage> {
 
   void _decrementCounter() {
     setState(() {
-      if (_samplingPointCount > originalDataSeries.length)
+      if (_samplingPointCount > _originalDataSeries.length)
         _samplingPointCount--;
     });
   }
@@ -66,7 +64,7 @@ class _SmoothieHomePageState extends State<SmoothieHomePage> {
         measureFn: (Point chartData, _) => chartData.y,
         colorFn: (Point point, _) => charts.MaterialPalette.teal.shadeDefault,
         id: 'Example Series',
-        data: originalDataSeries.smooth(
+        data: _originalDataSeries.smooth(
           _samplingPointCount,
         ),
       ),
@@ -82,7 +80,7 @@ class _SmoothieHomePageState extends State<SmoothieHomePage> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text("Smoothie Demo"),
         ),
         body: Center(
           child: Column(

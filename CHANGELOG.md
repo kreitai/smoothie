@@ -1,3 +1,8 @@
+## [0.3.0] - 2021-04-09
+
+### Null safety
+The package is now null-safe. Added a static function in a Smoothie class for convenient import.
+
 ## [0.2.0+1] - 2020-05-12
 
 ### Breaking changes
