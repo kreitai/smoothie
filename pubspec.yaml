@@ -1,16 +1,16 @@
 name: smoothie
-description: Create and sample a smooth bezier curve going through a given set of points
-version: 0.2.0+1
-homepage: https://github.com/alekskuzmin/smoothie
+description: Create and sample a smooth Bézier curve going through a given set of points
+version: 0.3.0
+homepage: https://github.com/kreitai/smoothie
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  bezier: ^1.1.5
-  vector_math: ^2.0.8
+  bezier: ^1.2.0
+  vector_math: ^2.1.0
 
 dev_dependencies:
   flutter_test:

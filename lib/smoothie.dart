@@ -6,6 +6,21 @@ import 'dart:math';
 import 'package:bezier/bezier.dart';
 import 'package:vector_math/vector_math.dart';
 
+class Smoothie {
+  ///Creates a sampled curve going through list of points.
+  ///
+  ///[sampleCount] is a number of points of the resulting smoothed curve
+  ///
+  ///Returns a list of length [sampleCount] points that lay on a curve going through the given points.
+  static List<Point<num>> smooth(
+    List<Point> points,
+    num sampleCount, {
+    bool isSorted = true,
+  }) {
+    return points.smooth(sampleCount, isSorted: isSorted);
+  }
+}
+
 extension SmoothPoints on List<Point> {
   ///Creates a sampled curve going through list of points.
   ///
@@ -20,7 +35,7 @@ extension SmoothPoints on List<Point> {
       this.sort();
     }
     var sampleWidth = (this[this.length - 1].x - this[0].x) / sampleCount;
-    var sampledCurve = List<Point>();
+    List<Point> sampledCurve = [];
     for (int originalPointIndex = 0;
         originalPointIndex < this.length - 1;
         originalPointIndex++) {
