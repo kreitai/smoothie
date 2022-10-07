@@ -1,4 +1,4 @@
-[![pub package](https://img.shields.io/pub/v/smoothie.svg)](https://pub.dartlang.org/packages/smoothie)
+[![Pub Popularity](https://img.shields.io/pub/popularity/smoothie?style=plastic)![Pub Likes](https://img.shields.io/pub/likes/smoothie?style=plastic)![Pub Points](https://img.shields.io/pub/points/smoothie?style=plastic)](https://pub.dartlang.org/packages/smoothie)
 
 # smoothie
 
